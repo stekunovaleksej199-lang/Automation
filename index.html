@@ -20,56 +20,6 @@
         .tg-link { display: inline-block; margin-top: 20px; color: #2980b9; text-decoration: none; font-weight: bold; }
     </style>
 </head>
-<style>
-  .lead-form {
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 30px;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.1);
-    font-family: -apple-system, sans-serif;
-  }
-  .lead-form h2 { margin: 0 0 20px; font-size: 22px; }
-  .lead-form input {
-    width: 100%; padding: 12px 14px; margin-bottom: 14px;
-    border: 1px solid #ddd; border-radius: 8px; font-size: 15px;
-    box-sizing: border-box;
-  }
-  .lead-form button {
-    width: 100%; padding: 12px; background: #007aff;
-    color: #fff; border: none; border-radius: 8px;
-    font-size: 16px; font-weight: 600; cursor: pointer;
-  }
-  .lead-form .success-msg {
-    display: none; text-align: center; color: #2e7d32;
-    margin-top: 12px; font-weight: 500;
-  }
-</style>
-<div class="lead-form">
-  <h2>Оставьте заявку</h2>
-  <form id="leadForm">
-    <input name="ФИО" placeholder="Ваше ФИО" required>
-    <input name="Номер" type="tel" placeholder="Номер телефона" required>
-    <input name="Телеграмм" placeholder="@username в Telegram">
-    <button type="submit">Отправить</button>
-  </form>
-  <div class="success-msg" id="successMsg">✅ Заявка отправлена!</div>
-</div>
-<script>
-  document.getElementById('leadForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(e.target));
-    await fetch('https://webhook.nodul.ru/25021/prod/8921f7eb-942b-49ab-9f95-0179819c1b30', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    e.target.reset();
-    document.getElementById('successMsg').style.display = 'block';
-    setTimeout(() => document.getElementById('successMsg').style.display = 'none', 3000);
-  });
-</script>
 <body>
 
 <header>
