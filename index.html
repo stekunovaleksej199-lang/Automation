@@ -3,58 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Автоматизация под ключ | Ваш бизнес на автопилоте</title>
+    <title>Автоматизация бизнеса | Ваш рост на автопилоте</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; background: #f9f9f9; color: #333; }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        header { text-align: center; padding: 60px 20px; background: #2c3e50; color: white; }
-        h1 { margin: 0; font-size: 2.5em; }
-        .form-group { margin-bottom: 15px; }
-        input { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;}
-        button { background: #27ae60; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; width: 100%; font-size: 18px; font-weight: bold; transition: 0.3s; }
-        button:hover { background: #219150; }
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .benefit { margin: 40px 0; padding: 20px; background: #fff; border-left: 5px solid #27ae60; }
-        footer { text-align: center; padding: 40px; }
-        .tg-link { display: inline-block; margin-top: 20px; color: #2980b9; text-decoration: none; font-weight: bold; }
+        :root { --primary: #2563eb; --accent: #22c55e; --dark: #0f172a; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0; background: #f8fafc; color: #334155; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
+        
+        /* Hero Section */
+        .hero { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%); color: white; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        
+        /* Cards & Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
+        .card { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .card i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
+
+        /* Form */
+        .form-section { background: white; padding: 50px; border-radius: 20px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); text-align: center; }
+        input { width: 100%; padding: 18px; margin-bottom: 20px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; box-sizing: border-box; }
+        button { background: var(--accent); color: white; padding: 18px; border: none; border-radius: 12px; font-size: 18px; font-weight: bold; cursor: pointer; width: 100%; transition: 0.3s; }
+        button:hover { background: #16a34a; transform: scale(1.01); }
+
+        /* Footer */
+        .footer { text-align: center; padding: 40px; font-size: 0.9rem; color: #64748b; }
     </style>
 </head>
 <body>
 
-<header>
+<section class="hero">
     <h1>Ваш бизнес на автопилоте</h1>
-    <p>Устраняем рутину, повышаем продажи и внедряем AI-решения под ключ</p>
-</header>
+    <p>Устраняем рутину, внедряем AI и растем вместе с вами</p>
+</section>
 
 <div class="container">
-    <div class="benefit">
-        <h2>Почему вам стоит внедрить автоматизацию?</h2>
-        <ul>
-            <li><strong>Экономия времени:</strong> делегируйте рутину ботам.</li>
-            <li><strong>Рост продаж:</strong> CRM напомнит менеджеру о каждом клиенте.</li>
-            <li><strong>Масштабирование:</strong> обработка заявок 24/7 без участия человека.</li>
-        </ul>
-    </div>
-
-    <h2>Наши услуги:</h2>
-    <div class="services">
-        <div class="card"><h3>CRM-системы</h3><p>Настройка AmoCRM, Bitrix24 под ваши процессы</p></div>
-        <div class="card"><h3>Чат-боты</h3><p>Умные автоворонки в Telegram, WhatsApp</p></div>
-        <div class="card"><h3>Парсинг</h3><p>Сбор данных с любых сайтов и площадок</p></div>
-        <div class="card"><h3>AI-агенты</h3><p>Интеграция ChatGPT/Claude в ваш сервис</p></div>
-    </div>
-
-    <h2 style="margin-top: 50px; text-align: center;">Готовы обсудить ваш проект?</h2>
-    <p style="text-align: center;">Оставьте заявку, и мы бесплатно разберем, как автоматизировать именно ваш бизнес.</p>
     
-    <form action="https://formspree.io/f/mvznydzk" method="POST">
-        <div class="form-group"><input type="text" name="name" placeholder="Как к вам обращаться?" required></div>
-        <div class="form-group"><input type="tel" name="phone" placeholder="Номер телефона" required></div>
-        <div class="form-group"><input type="text" name="telegram" placeholder="Ваш Telegram (@username)" required></div>
-        <button type="submit">Получить бесплатную консультацию</button>
-    </form>
+    <!-- Что вы получите -->
+    <h2 style="text-align: center; margin-top: 50px;">Что вы получите в итоге?</h2>
+    <div class="grid">
+        <div class="card">
+            <i class="fa-solid fa-clock"></i>
+            <h3>+20 часов в неделю</h3>
+            <p>Вы забудете о рутине. Бот сам отвечает на сообщения и ведет базу данных.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-users-line"></i>
+            <h3>Ни одного потерянного лида</h3>
+            <p>Система напомнит менеджеру перезвонить и сохранит каждый диалог.</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-chart-column"></i>
+            <h3>Прозрачная аналитика</h3>
+            <p>Видите реальные цифры продаж и узкие места в воронке в один клик.</p>
+        </div>
+    </div>
 
-    <footer>
-        <p>Или напишите мне напрямую:</p>
-        <a href="https://t.me/LexRKO" class="tg-link">Telegram: @LexRKO</a>
+    <!-- Форма -->
+    <div class="form-section">
+        <h2>Готовы начать?</h2>
+        <p>Запишитесь на бесплатный 15-минутный разбор вашего бизнеса.</p>
+        <form action="https://formspree.io/f/mvznydzk" method="POST">
+            <input type="text" name="name" placeholder="Как вас зовут?" required>
+            <input type="tel" name="phone" placeholder="Ваш номер телефона" required>
+            <button type="submit">Получить бесплатный аудит</button>
+        </form>
+        <p style="margin-top: 15px; font-size: 0.8rem; color: #94a3b8;">Никаких обязательств. Разберем боли и покажем путь решения.</p>
+    </div>
+
+    <footer class="footer">
+        <p>Есть вопросы прямо сейчас?</p>
+        <a href="https://t.me/LexRKO" style="color: var(--primary); font-
+        weight: bold; text-decoration: none;">
+         <i class="fa-brands fa-telegram"></i> Написать мне в Telegram
+        </a>
+    </footer>
+</div>
+
+</body>
+</html>
